@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "pretest": "node test/fixtures/make-fixture.js",
-    "test": "node --test test/",
+    "test": "node test/run.js",
     "types": "tsc",
     "check": "npm test && npm run types",
     "example": "node examples/basic.js"

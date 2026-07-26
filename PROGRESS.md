@@ -22,7 +22,7 @@ Laatst bijgewerkt: 26-07-2026
 
 ## Fase 2 | Tests (af)
 
-- [x] 74 tests, `node:test`, geen framework
+- [x] 71 tests, `node:test`, geen framework
 - [x] Asberekening, inclusief vlakke reeks en gemengde tekens
 - [x] Tabel precies op de paginagrens (zelf-kalibrerend, geen aanname)
 - [x] Tabel over vier pagina's, geen rij verloren of van volgorde
@@ -54,14 +54,17 @@ Laatst bijgewerkt: 26-07-2026
 - [x] `npm run check` (tests plus typecheck), `pretest` maakt de testafbeelding
 - [x] `npm pack` gecontroleerd: 13 bestanden, 23,7 kB, geen tests of voorbeelden mee
 
-## Fase 4 | Publiceren (open, en dit is de eigenlijke test)
+## Fase 4 | Publiceren (deels af, 26-07-2026)
 
-- [ ] GitHub-account en repository (URL ontbreekt nog, moet in `package.json`)
-- [ ] CI-badge in de README zodra de repo bestaat (nu bewust weggelaten,
-      een gebroken badge is slechter dan geen badge)
+- [x] GitHub-repo publiek: https://github.com/justiceneslo-rgb/pdfkit-report
+- [x] `repository`, `bugs` en `homepage` in `package.json`
+- [x] CI-badge en npm-badge in de README
+- [x] Eerste push (twee commits, 35 bestanden)
+- [ ] CI-uitslag nakijken en zo nodig repareren
+- [ ] Trefwoorden bij "About" op GitHub: pdf, pdfkit, report, nodejs,
+      typescript, page-break, charts
 - [ ] `CHANGELOG.md` bij de eerste versie na 0.1.0
-- [ ] `repository`, `bugs` en `homepage` invullen in `package.json`
-- [ ] Publiceren op npm als 0.1.0
+- [ ] Publiceren op npm als 0.1.0 (npm-account nodig, apart van GitHub)
 - [ ] Een technische post over paginabreuk-veilige tabellen in PDFKit,
       met code en de voorbeeld-PDF, geplaatst waar ontwikkelaars zelf zoeken
 - [ ] Profiel op een dev-marktplaats met dit als portfoliostuk

@@ -243,7 +243,7 @@ asserts what must *not* compile, so they cannot drift away from the runtime.
 ## Tests
 
 ```bash
-npm test          # 74 tests
+npm test          # 71 tests
 npm run types     # type declarations under --strict
 npm run check     # both
 ```

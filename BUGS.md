@@ -91,6 +91,34 @@
 - **Gevonden door:** dezelfde randgevallenronde.
 - **Status:** opgelost, 26-07-2026.
 
+## B10 | `node --test test/` werkt niet vanaf Node 22
+
+- **Issue:** de CI faalde op Node 22 en 24 (Linux, macOS en Windows) met
+  `Cannot find module '<repo>/test'`. Node 18 en 20 waren groen.
+- **Oorzaak:** vanaf Node 22 wordt een positioneel argument van `--test` als
+  glob-patroon behandeld in plaats van als map om te doorlopen. Een kale map
+  wordt dan als modulepad opgevat. Een glob meegeven faalt precies omgekeerd,
+  want Node 18 en 20 nemen die letterlijk.
+- **Oplossing:** `test/run.js` leest de map zelf en geeft de gevonden
+  `*.test.js`-bestanden door aan `node --test`. Werkt op alle versies en alle
+  platforms, en vindt nieuwe testbestanden automatisch, zodat een toegevoegde
+  test nooit stil kan overslaan.
+- **Gevonden door:** de eerste CI-run na publicatie. Lokaal op Node 20 was niets
+  te zien.
+- **Status:** opgelost, 26-07-2026.
+
+## B11 | Het testaantal was drie te hoog
+
+- **Issue:** README en documentatie meldden 74 tests. Het zijn er 71.
+- **Oorzaak:** `node --test test/` draaide ook `helpers.js`, `pdftext.js` en
+  `fixtures/make-fixture.js`, en rekende elk bestand zonder tests als een
+  geslaagde test. Die drie zaten dus in het getal.
+- **Oplossing:** `test/run.js` draait alleen `*.test.js`. Het getal in de
+  README is gecorrigeerd naar 71.
+- **Gevonden door:** het verschil in de uitslag na het wijzigen van de runner.
+- **Status:** opgelost, 26-07-2026. Dit was een publieke claim, dus de correctie
+  telt dubbel: zie de regel in agents.md over geen claim zonder bewijs.
+
 ## Bekende beperkingen (geen bugs, bewuste grenzen)
 
 - Niet-Latijnse schriften werken niet met de ingebouwde fonts. Registreer een

@@ -112,3 +112,14 @@ zijn, compileerden. Zie BUGS.md, B7.
 **Reden:** Puppeteer draait niet op deze ARM-server, dus een vergelijking zou
 verzonnen zijn. De regel uit agents.md geldt ook voor de verkooptekst: geen claim
 zonder bewijs. Een lege cel is geloofwaardiger dan een gegokt getal.
+
+## 14. Eigen testrunner in plaats van `node --test test/`
+
+**Besluit:** `npm test` draait `node test/run.js`, dat de testmap inleest en de
+`*.test.js`-bestanden aan `node --test` doorgeeft.
+
+**Reden:** `node --test test/` werkt niet vanaf Node 22 en een glob werkt niet op
+18 en 20, dus er is geen enkel argument dat op alle ondersteunde versies werkt.
+Een vaste lijst bestanden zou het ook oplossen, maar dan draait een test die
+iemand toevoegt stil niet mee, en dat is precies het soort stille fout dat dit
+project niet mag hebben. Zie BUGS.md, B10 en B11.
