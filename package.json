@@ -1,0 +1,48 @@
+{
+  "name": "pdfkit-report",
+  "version": "0.1.0",
+  "description": "Schema in, PDF report out. Page-break-safe tables with repeating headers, bar/scatter/delta charts and running headers and footers. Built on PDFKit: no browser, no Chromium, no headless dependency.",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "src",
+    "types/index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "pretest": "node test/fixtures/make-fixture.js",
+    "test": "node --test test/",
+    "types": "tsc",
+    "check": "npm test && npm run types",
+    "example": "node examples/basic.js"
+  },
+  "keywords": [
+    "pdf",
+    "pdfkit",
+    "report",
+    "reporting",
+    "pdf-report",
+    "table",
+    "page-break",
+    "repeating-header",
+    "widows-orphans",
+    "chart",
+    "invoice",
+    "no-puppeteer",
+    "serverless",
+    "typescript"
+  ],
+  "author": "Justice Digital",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "pdfkit": "^0.19.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
+  }
+}
