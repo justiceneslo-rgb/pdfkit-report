@@ -1,5 +1,8 @@
 # pdfkit-report
 
+[![test](https://github.com/justiceneslo-rgb/pdfkit-report/actions/workflows/test.yml/badge.svg)](https://github.com/justiceneslo-rgb/pdfkit-report/actions/workflows/test.yml)
+[![npm](https://img.shields.io/npm/v/pdfkit-report)](https://www.npmjs.com/package/pdfkit-report)
+
 Schema in, PDF report out. Page-break-safe tables that repeat their header, charts drawn as vectors, running headers and footers with real page numbers.
 
 Built on [PDFKit](https://pdfkit.org). **No browser, no Chromium, no headless dependency.**

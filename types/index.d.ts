@@ -1,5 +1,5 @@
 // Type definitions for pdfkit-report
-// Project: https://github.com/justicedigital/pdfkit-report
+// Project: https://github.com/justiceneslo-rgb/pdfkit-report
 
 /// <reference types="node" />
 
