@@ -260,6 +260,16 @@ Tested on Node 18, 20, 22 and 24, on Linux, macOS and Windows.
 
 Node 18 or newer. One direct dependency: `pdfkit`.
 
+## Contact
+
+Bugs, questions and feature requests belong in an
+[issue](https://github.com/justiceneslo-rgb/pdfkit-report/issues). That is the
+fastest route and it helps the next person with the same problem.
+
+Need this built into an existing application? PDF reporting is what I do: fixed
+price, fixed timeline, tests included. Mail **info@justicedigital.nl** or see
+[justicedigital.nl](https://justicedigital.nl).
+
 ## Licence
 
 MIT
