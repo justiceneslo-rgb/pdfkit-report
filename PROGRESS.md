@@ -60,7 +60,9 @@ Laatst bijgewerkt: 26-07-2026
 - [x] `repository`, `bugs` en `homepage` in `package.json`
 - [x] CI-badge en npm-badge in de README
 - [x] Eerste push (twee commits, 35 bestanden)
-- [ ] CI-uitslag nakijken en zo nodig repareren
+- [x] CI-uitslag nakijken en zo nodig repareren (groen op 73d78f4, alle zes
+      jobs; eigen testrunner `test/run.js` want `node --test test/` breekt
+      op Node 22 en later)
 - [ ] Trefwoorden bij "About" op GitHub: pdf, pdfkit, report, nodejs,
       typescript, page-break, charts
 - [ ] `CHANGELOG.md` bij de eerste versie na 0.1.0
